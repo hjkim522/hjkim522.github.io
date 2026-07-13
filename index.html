@@ -1,1 +1,261 @@
-Hyunjun Kim
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyunjun Kim — Memorable Moments</title>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --fg: #f5f3ee;
+    --dim: rgba(245, 243, 238, 0.55);
+    --sans: "Helvetica Neue", Helvetica, Arial, "Apple SD Gothic Neo", sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  html { scroll-snap-type: y mandatory; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--fg); color: var(--bg); }
+  a { color: inherit; text-decoration: none; }
+
+  /* ---------- fixed chrome ---------- */
+  .chrome {
+    position: fixed;
+    z-index: 10;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+    color: #fff;
+  }
+  .chrome.name { top: 1.4rem; left: 1.6rem; font-weight: 600; }
+  .chrome.counter { top: 1.4rem; right: 1.6rem; font-variant-numeric: tabular-nums; }
+  .chrome.ig { bottom: 1.4rem; right: 1.6rem; }
+  .chrome.ig a:hover { opacity: 0.6; }
+
+  #bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--fg);
+    z-index: 11;
+    transition: width 0.3s ease-out;
+  }
+
+  /* ---------- slides ---------- */
+  section {
+    height: 100vh;
+    height: 100dvh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+  section img.bg {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transform: scale(1.06);
+    transition: transform 1.4s cubic-bezier(0.2, 0.6, 0.2, 1), opacity 0.8s;
+    opacity: 0.9;
+  }
+  section.seen img.bg { transform: scale(1); opacity: 1; }
+  section .shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 32%);
+    pointer-events: none;
+  }
+  section figcaption {
+    position: relative;
+    z-index: 2;
+    padding: 0 1.6rem 1.6rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1.1rem;
+    opacity: 0;
+    transform: translateY(0.6rem);
+    transition: opacity 0.7s 0.25s, transform 0.7s 0.25s;
+  }
+  section.seen figcaption { opacity: 1; transform: none; }
+  figcaption .no {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    color: var(--dim);
+    font-variant-numeric: tabular-nums;
+  }
+  figcaption .place {
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  figcaption .yr { font-size: 0.7rem; letter-spacing: 0.16em; color: var(--dim); }
+
+  /* ---------- intro / outro ---------- */
+  .cover {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1.6rem;
+  }
+  .cover h1 {
+    font-size: clamp(2.8rem, 9vw, 8rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+  .cover p {
+    margin-top: 1.2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .cover .hint {
+    position: absolute;
+    left: 0; right: 0;
+    text-align: center;
+    bottom: 1.6rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--dim);
+    animation: nudge 2.2s ease-in-out infinite;
+  }
+  @keyframes nudge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(0.45rem); }
+  }
+  .outro { align-items: center; justify-content: center; }
+  .outro .in {
+    text-align: center;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 2.4;
+    color: var(--dim);
+  }
+  .outro .in a { color: var(--fg); border-bottom: 1px solid var(--dim); padding-bottom: 2px; }
+  .outro .in a:hover { border-color: var(--fg); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    section img.bg, section figcaption, .cover .hint { transition: none; animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="bar"></div>
+<div class="chrome name">Hyunjun Kim</div>
+<div class="chrome counter" id="counter">— / 21</div>
+<div class="chrome ig"><a href="https://instagram.com/hyunjun522/" target="_blank" rel="noopener">IG ↗</a></div>
+
+<section class="cover" id="cover">
+  <h1>Memorable<br>Moments</h1>
+  <p>Hyunjun Kim — Photographs, 2022–2025</p>
+  <div class="hint">Scroll ↓</div>
+</section>
+
+<div id="slides"></div>
+
+<section class="outro">
+  <div class="in">
+    That's all for now.<br>
+    <a href="https://instagram.com/hyunjun522/" target="_blank" rel="noopener">More on Instagram</a><br>
+    © Hyunjun Kim
+  </div>
+</section>
+
+<script>
+const PHOTOS = [
+  { f: "01-Calp3Dor1RC.jpg", place: "Seongsan, Jeju",        yr: 2022 },
+  { f: "02-Calp67aLl5O.jpg", place: "Canola fields, Jeju",   yr: 2022 },
+  { f: "03-CalurCdLHp3.jpg", place: "Basalt wall, Jeju",     yr: 2022 },
+  { f: "04-Cao_lCQLbw5.jpg", place: "Harbor mural, Jeju",    yr: 2022 },
+  { f: "05-Cao_1kBL_fT.jpg", place: "Hourglass, Jeju",       yr: 2022 },
+  { f: "06-CapDuB-Loy3.jpg", place: "Red sun, Jeju",         yr: 2022 },
+  { f: "07-CbEH0tCpWpC.jpg", place: "Forest cairns, Jeju",   yr: 2022 },
+  { f: "08-C9kEdbIv34A.jpg", place: "Ubud, Bali",            yr: 2024 },
+  { f: "09-C9kEhCzvJRA.jpg", place: "Mount Agung, Bali",     yr: 2024 },
+  { f: "10-C9ryyHovuJY.jpg", place: "Shoreline, Bali",       yr: 2024 },
+  { f: "11-C9ry27vPRrL.jpg", place: "Poolside, Bali",        yr: 2024 },
+  { f: "12-C9rzHJSP1Pw.jpg", place: "Low tide, Bali",        yr: 2024 },
+  { f: "13-C97XIeTvQWw.jpg", place: "Beach club, Bali",      yr: 2024 },
+  { f: "14-DAipz-7TDxL.jpg", place: "Blue hour, Seoul",      yr: 2024 },
+  { f: "15-DAiqcMqTAay.jpg", place: "Yellow taxi",           yr: 2024 },
+  { f: "16-DD64rm5zqgp.jpg", place: "Platform, Tokyo",       yr: 2024 },
+  { f: "17-DD65PcIJVw8.jpg", place: "Gamcheon, Busan",       yr: 2024 },
+  { f: "18-DJYU7xExQMf.jpg", place: "Intersection, Bangkok", yr: 2025 },
+  { f: "19-DJYVoETxh6l.jpg", place: "Midtown, New York",     yr: 2025 },
+  { f: "20-DJYjwt6ROYK.jpg", place: "Wat Arun, Bangkok",     yr: 2025 },
+  { f: "21-DM2geL6Jrx5.jpg", place: "Overpass, Seoul",       yr: 2025 },
+];
+
+const holder = document.getElementById("slides");
+PHOTOS.forEach((p, i) => {
+  const s = document.createElement("section");
+  s.dataset.i = i;
+  s.innerHTML =
+    `<img class="bg" loading="lazy" src="photos/${p.f}" alt="${p.place}">` +
+    `<div class="shade"></div>` +
+    `<figcaption>` +
+      `<span class="no">${String(i + 1).padStart(2, "0")}</span>` +
+      `<span class="place">${p.place}</span>` +
+      `<span class="yr">${p.yr}</span>` +
+    `</figcaption>`;
+  holder.appendChild(s);
+});
+
+const counter = document.getElementById("counter");
+const bar = document.getElementById("bar");
+const sections = [...document.querySelectorAll("section")];
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.intersectionRatio < 0.55) return;
+    en.target.classList.add("seen");
+    const i = en.target.dataset.i;
+    if (i !== undefined) {
+      const n = +i + 1;
+      counter.textContent = String(n).padStart(2, "0") + " / " + PHOTOS.length;
+      bar.style.width = (n / PHOTOS.length) * 100 + "%";
+      // warm up the next two full images
+      for (let k = n; k < Math.min(n + 2, PHOTOS.length); k++) {
+        const img = new Image();
+        img.src = "photos/" + PHOTOS[k].f;
+      }
+    } else if (en.target.id === "cover") {
+      counter.textContent = "— / " + PHOTOS.length;
+      bar.style.width = "0%";
+    } else {
+      bar.style.width = "100%";
+    }
+  });
+}, { threshold: 0.55 });
+sections.forEach(s => io.observe(s));
+
+/* keyboard paging */
+document.addEventListener("keydown", e => {
+  const dir = e.key === "ArrowDown" || e.key === "PageDown" || e.key === " " ? 1
+            : e.key === "ArrowUp"   || e.key === "PageUp" ? -1 : 0;
+  if (!dir) return;
+  e.preventDefault();
+  const y = scrollY, h = innerHeight;
+  const cur = Math.round(y / h);
+  const next = Math.min(Math.max(cur + dir, 0), sections.length - 1);
+  sections[next].scrollIntoView({ behavior: "smooth" });
+});
+</script>
+</body>
+</html>
