@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>진주 &amp; 현준 — 2026. 02. 22</title>
+<meta name="description" content="박진주 · 김현준, 2026년 2월 22일 결혼했습니다.">
+<meta property="og:title" content="진주 & 현준 — 2026. 02. 22">
+<meta property="og:description" content="우리, 결혼했습니다.">
+<meta property="og:image" content="photos/DH_01471.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤍</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500;1,600&family=Noto+Serif+KR:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf8f4;
+    --ink: #33291f;
+    --soft: #8c7f6f;
+    --line: #e3ddd2;
+    --accent: #a08a5f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .en { font-family: 'Cormorant Garamond', 'Noto Serif KR', serif; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative;
+    height: 100svh;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    isolation: isolate;
+  }
+  .hero img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 75% 60% at 50% 46%, rgba(25,18,14,.48), transparent 72%),
+      linear-gradient(to bottom, rgba(25,18,14,.32), rgba(25,18,14,.1) 45%, rgba(25,18,14,.5));
+    z-index: -1;
+  }
+  .hero-inner { padding: 0 24px; animation: rise 1.6s ease both .3s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  .hero-date {
+    font-size: 14px;
+    letter-spacing: .5em;
+    text-indent: .5em;
+    margin-bottom: 26px;
+    text-shadow: 0 1px 10px rgba(0,0,0,.5);
+  }
+  .hero h1 {
+    font-size: clamp(44px, 9vw, 104px);
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.08;
+    letter-spacing: .02em;
+    text-shadow: 0 2px 14px rgba(0,0,0,.45), 0 2px 44px rgba(0,0,0,.35);
+  }
+  .hero h1 .amp { font-style: normal; font-weight: 300; opacity: .85; }
+  .hero-sub {
+    margin-top: 30px;
+    font-size: 15px;
+    letter-spacing: .34em;
+    text-indent: .34em;
+    font-weight: 400;
+    text-shadow: 0 1px 10px rgba(0,0,0,.5);
+  }
+  .scroll-hint {
+    position: absolute;
+    bottom: 34px; left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: .3em;
+    text-indent: .3em;
+    opacity: .75;
+  }
+  .scroll-hint::after {
+    content: '';
+    display: block;
+    width: 1px; height: 42px;
+    margin: 12px auto 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,.9), transparent);
+    animation: drop 2.2s ease-in-out infinite;
+  }
+  @keyframes drop {
+    0% { transform: scaleY(0); transform-origin: top; }
+    45% { transform: scaleY(1); transform-origin: top; }
+    55% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* ---------- intro ---------- */
+  .intro {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 130px 28px 120px;
+    text-align: center;
+  }
+  .intro-eyebrow {
+    font-size: 13px;
+    letter-spacing: .42em;
+    text-indent: .42em;
+    color: var(--accent);
+    margin-bottom: 36px;
+  }
+  .intro p.lead {
+    font-size: clamp(19px, 3vw, 24px);
+    line-height: 2;
+    font-weight: 300;
+  }
+  .intro .names {
+    margin-top: 44px;
+    font-size: 17px;
+    letter-spacing: .18em;
+    color: var(--soft);
+  }
+  .intro .names b { font-weight: 400; color: var(--ink); }
+  .dday {
+    display: inline-block;
+    margin-top: 52px;
+    padding: 16px 34px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+    letter-spacing: .22em;
+    color: var(--soft);
+  }
+  .dday strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--accent);
+    letter-spacing: .04em;
+    margin: 0 .35em;
+  }
+
+  /* ---------- chapters ---------- */
+  .chapter { max-width: 1160px; margin: 0 auto; padding: 40px 24px 90px; }
+  .chapter-head {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .chapter-no {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: .3em;
+    color: var(--accent);
+  }
+  .chapter-no::after {
+    content: '';
+    display: block;
+    width: 36px; height: 1px;
+    background: var(--line);
+    margin: 18px auto;
+  }
+  .chapter-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 5vw, 44px);
+    font-weight: 400;
+    letter-spacing: .06em;
+  }
+  .chapter-sub {
+    margin-top: 12px;
+    font-size: 14px;
+    letter-spacing: .3em;
+    text-indent: .3em;
+    color: var(--soft);
+  }
+  .rows { display: flex; flex-direction: column; gap: clamp(14px, 2.5vw, 28px); }
+  .row { display: flex; gap: clamp(14px, 2.5vw, 28px); }
+  .row figure {
+    flex: 1;
+    overflow: hidden;
+    cursor: zoom-in;
+    background: #efeae1;
+  }
+  .row.single figure { flex: none; width: 100%; }
+  .row.single.narrow { justify-content: center; }
+  .row.single.narrow figure { width: min(100%, 780px); }
+  .row img {
+    display: block;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(.2,.6,.2,1), opacity .8s ease;
+  }
+  .row figure:hover img { transform: scale(1.03); }
+  .row.pair figure { aspect-ratio: 2 / 3; }
+  .row.single figure { aspect-ratio: 3 / 2; }
+  .row.single.tall figure { aspect-ratio: auto; }
+
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity 1s ease, transform 1s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ---------- finale ---------- */
+  .finale {
+    position: relative;
+    height: 92svh;
+    min-height: 520px;
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #fff;
+    isolation: isolate;
+  }
+  .finale img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  .finale::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(30,22,18,.05) 40%, rgba(30,22,18,.5));
+    z-index: -1;
+  }
+  .finale-inner { text-align: center; padding: 0 24px 90px; }
+  .finale-inner .en {
+    font-size: clamp(30px, 5.4vw, 54px);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: .04em;
+    text-shadow: 0 2px 24px rgba(0,0,0,.3);
+  }
+  .finale-inner p {
+    margin-top: 20px;
+    font-size: 14px;
+    letter-spacing: .3em;
+    text-indent: .3em;
+    opacity: .9;
+  }
+
+  footer {
+    text-align: center;
+    padding: 72px 24px 64px;
+    font-size: 13px;
+    letter-spacing: .22em;
+    color: var(--soft);
+  }
+  footer .en {
+    display: block;
+    font-size: 19px;
+    font-style: italic;
+    letter-spacing: .12em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  footer .domain {
+    display: block;
+    margin-top: 26px;
+    font-size: 11px;
+    letter-spacing: .3em;
+    color: #b7ac9c;
+  }
+
+  /* ---------- lightbox ---------- */
+  .lightbox {
+    position: fixed; inset: 0;
+    background: rgba(18, 14, 11, .96);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .35s ease;
+  }
+  .lightbox.open { opacity: 1; pointer-events: auto; }
+  .lightbox img {
+    max-width: min(94vw, 1400px);
+    max-height: 88svh;
+    object-fit: contain;
+    box-shadow: 0 20px 80px rgba(0,0,0,.5);
+  }
+  .lb-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgba(255,255,255,.75);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    line-height: 1;
+    padding: 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .lb-btn:hover { color: #fff; }
+  .lb-prev { left: 8px; }
+  .lb-next { right: 8px; }
+  .lb-close {
+    position: absolute;
+    top: 14px; right: 20px;
+    background: none; border: none;
+    color: rgba(255,255,255,.75);
+    font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .lb-close:hover { color: #fff; }
+  .lb-count {
+    position: absolute;
+    bottom: 22px; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,.6);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    letter-spacing: .2em;
+  }
+  @media (max-width: 560px) {
+    .lb-btn { font-size: 32px; padding: 14px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="photos/DH_01471.jpg" alt="서울 하늘 아래, 우리 둘" fetchpriority="high">
+  <div class="hero-inner">
+    <p class="hero-date en">2026 · 02 · 22</p>
+    <h1 class="en">Jinju <span class="amp">&amp;</span> Hyunjun</h1>
+    <p class="hero-sub">우리, 결혼했습니다</p>
+  </div>
+  <p class="scroll-hint en">SCROLL</p>
+</header>
+
+<section class="intro reveal">
+  <p class="intro-eyebrow en">OUR WEDDING DAY</p>
+  <p class="lead">
+    2026년 2월 22일,<br>
+    서로의 가장 좋은 친구였던 우리는<br>
+    부부가 되었습니다.
+  </p>
+  <p class="names"><b>김현준</b> &nbsp;그리고&nbsp; <b>박진주</b></p>
+  <div class="dday">함께 걸어온 지 <strong id="dday-num">D+0</strong> 일째</div>
+</section>
+
+<main id="gallery"></main>
+
+<section class="finale reveal">
+  <img src="photos/DH_01563.jpg" alt="노을 지는 서울, 베일 아래의 입맞춤" loading="lazy">
+  <div class="finale-inner">
+    <p class="en">and this is just the beginning.</p>
+    <p>그리고, 이야기는 계속됩니다</p>
+  </div>
+</section>
+
+<footer>
+  <span class="en">Jinju &amp; Hyunjun</span>
+  22 FEBRUARY 2026 · SEOUL
+  <span class="domain en">jinju.park</span>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="사진 크게 보기">
+  <button class="lb-close" aria-label="닫기">&times;</button>
+  <button class="lb-btn lb-prev" aria-label="이전 사진">&#8249;</button>
+  <img id="lb-img" src="" alt="">
+  <button class="lb-btn lb-next" aria-label="다음 사진">&#8250;</button>
+  <p class="lb-count en" id="lb-count"></p>
+</div>
+
+<script>
+  // ---- photo data: [filename, orientation] per chapter ----
+  const chapters = [
+    {
+      no: 'chapter one', title: 'The Garden', sub: '초록이 가득했던 정원에서',
+      photos: [
+        ['DH_00013.jpg','l'], ['DH_00040_2.jpg','p'], ['DH_00053.jpg','p'],
+        ['DH_00032.jpg','l'], ['DH_00098.jpg','p'], ['DH_00103.jpg','p'],
+        ['DH_00089.jpg','l'], ['DH_00174.jpg','p'], ['DH_00139_2.jpg','l'],
+      ],
+    },
+    {
+      no: 'chapter two', title: 'The Veil', sub: '하얀 집, 그리고 베일',
+      photos: [
+        ['DH_00296.jpg','p'], ['DH_00200.jpg','p'], ['DH_00209.jpg','p'],
+        ['DH_00268.jpg','p'], ['DH_00272.jpg','p'], ['DH_00310.jpg','p'],
+        ['DH_00320_1.jpg','l'], ['DH_00343.jpg','p'], ['DH_00370.jpg','p'],
+        ['DH_00385_2.jpg','p'],
+      ],
+    },
+    {
+      no: 'chapter three', title: 'Sunlit Days', sub: '햇살 아래, 평범한 우리답게',
+      photos: [
+        ['DH_00535.jpg','l'], ['DH_00547.jpg','p'], ['DH_00554.jpg','p'],
+        ['DH_00599.jpg','p'], ['DH_00680.jpg','p'], ['DH_00723.jpg','p'],
+        ['DH_00749.jpg','p'], ['DH_00773.jpg','p'],
+      ],
+    },
+    {
+      no: 'chapter four', title: 'Lavender', sub: '연보라빛 웃음',
+      photos: [
+        ['DH_00898.jpg','p'], ['DH_00916.jpg','p'], ['DH_00958.jpg','l'],
+        ['DH_00935.jpg','p'], ['DH_01007_1.jpg','p'], ['DH_01083.jpg','l'],
+        ['DH_01068.jpg','p'], ['DH_01109.jpg','p'], ['DH_01138.jpg','p'],
+        ['DH_01188.jpg','l'],
+      ],
+    },
+    {
+      no: 'chapter five', title: 'The Waltz', sub: '클래식한 계단 위에서',
+      photos: [
+        ['DH_01252.jpg','l'], ['DH_01176.jpg','p'], ['DH_01203.jpg','p'],
+        ['DH_01227.jpg','p'], ['DH_01234.jpg','p'], ['DH_01240.jpg','p'],
+        ['DH_01243.jpg','p'], ['DH_01258_2.jpg','p'], ['DH_01264.jpg','p'],
+        ['DH_01266.jpg','p'], ['DH_01277.jpg','p'],
+      ],
+    },
+    {
+      no: 'chapter six', title: 'Seoul Dusk', sub: '노을 지는 서울의 옥상에서',
+      photos: [
+        ['DH_01471.jpg','l'], ['DH_01525.jpg','p'], ['DH_01527.jpg','p'],
+      ],
+    },
+  ];
+
+  // ---- render gallery: portraits pair up, landscapes get a full row ----
+  const flat = [];
+  const gallery = document.getElementById('gallery');
+  chapters.forEach(ch => {
+    const section = document.createElement('section');
+    section.className = 'chapter';
+    section.innerHTML = `
+      <div class="chapter-head reveal">
+        <p class="chapter-no en">${ch.no}</p>
+        <h2 class="chapter-title en">${ch.title}</h2>
+        <p class="chapter-sub">${ch.sub}</p>
+      </div>`;
+    const rows = document.createElement('div');
+    rows.className = 'rows';
+
+    let i = 0;
+    while (i < ch.photos.length) {
+      const [file, ori] = ch.photos[i];
+      const row = document.createElement('div');
+      if (ori === 'l') {
+        row.className = 'row single reveal';
+        row.appendChild(makeFigure(file, ch.title));
+        i += 1;
+      } else if (i + 1 < ch.photos.length && ch.photos[i + 1][1] === 'p') {
+        row.className = 'row pair reveal';
+        row.appendChild(makeFigure(file, ch.title));
+        row.appendChild(makeFigure(ch.photos[i + 1][0], ch.title));
+        i += 2;
+      } else {
+        row.className = 'row single narrow tall reveal';
+        row.appendChild(makeFigure(file, ch.title));
+        i += 1;
+      }
+      rows.appendChild(row);
+    }
+    section.appendChild(rows);
+    gallery.appendChild(section);
+  });
+
+  function makeFigure(file, alt) {
+    const idx = flat.length;
+    flat.push(file);
+    const fig = document.createElement('figure');
+    const img = document.createElement('img');
+    img.src = 'photos/' + file;
+    img.alt = alt;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    fig.appendChild(img);
+    fig.addEventListener('click', () => openLightbox(idx));
+    return fig;
+  }
+
+  // ---- D+ counter ----
+  const wedding = new Date(2026, 1, 22); // 2026-02-22 local time
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const days = Math.round((today - wedding) / 86400000) + 1; // 결혼 당일 = 1일째
+  document.getElementById('dday-num').textContent = 'D+' + days.toLocaleString();
+
+  // ---- reveal on scroll ----
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ---- lightbox ----
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbCount = document.getElementById('lb-count');
+  let cur = 0;
+
+  function openLightbox(i) {
+    cur = i;
+    show();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function show() {
+    lbImg.src = 'photos/' + flat[cur];
+    lbCount.textContent = (cur + 1) + ' / ' + flat.length;
+  }
+  function step(d) { cur = (cur + d + flat.length) % flat.length; show(); }
+
+  lb.querySelector('.lb-close').addEventListener('click', closeLightbox);
+  lb.querySelector('.lb-prev').addEventListener('click', e => { e.stopPropagation(); step(-1); });
+  lb.querySelector('.lb-next').addEventListener('click', e => { e.stopPropagation(); step(1); });
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') step(-1);
+    if (e.key === 'ArrowRight') step(1);
+  });
+  let touchX = null;
+  lb.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) step(dx > 0 ? -1 : 1);
+    touchX = null;
+  }, { passive: true });
+</script>
+</body>
+</html>
